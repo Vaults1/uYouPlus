@@ -2,6 +2,10 @@
 
 # pragma mark - YouTube patches
 
+%hook YTHotConfig
+- (BOOL)disableAfmaIdfaCollection { return NO; }
+%end
+
 // https://github.com/PoomSmart/YouTube-X/blob/1e62b68e9027fcb849a75f54a402a530385f2a51/Tweak.x#L27
 // %hook YTAdsInnerTubeContextDecorator
 // - (void)decorateContext:(id)context {}
